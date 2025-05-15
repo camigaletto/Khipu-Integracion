@@ -27,50 +27,43 @@ autónoma.
 - Git / GitHub
 
 ---
-
 ## 📸 Proceso paso a paso de la integración con Khipu
 
 <ul>
   <li>
     <strong>🟣 Paso 1: Inicio del flujo</strong><br>
     El usuario accede a la aplicación y ve el botón “Pagar con Khipu”.<br>
-    <img src="static/img/paso1khipu.png" alt="Inicio del flujo" width="600">
-    
+    <img src="static/img/paso1khipu.png" alt="Paso 1 - Inicio del flujo" width="600">
   </li>
   <li>
     <strong>🟣 Paso 2: Detalle del pago</strong><br>
-    Pantalla de Khipu donde se muestra el monto total a pagar y opciones para iniciar el pago.<br>
-    <img src="static/img/paso2khipu.png" alt="Detalle del pago" width="600">
-    
+    Pantalla donde se muestra el monto total a pagar y se inicia la operación.<br>
+    <img src="static/img/paso2khipu.png" alt="Paso 2 - Detalle del pago" width="600">
   </li>
   <li>
     <strong>🟣 Paso 3: Selección del banco</strong><br>
-    El usuario elige su banco desde la interfaz simplificada de Khipu.<br>
-    <img src="static/img/paso3khipu.png" alt="Selección del banco" width="600">
-    
+    El usuario elige su banco desde la interfaz de Khipu.<br>
+    <img src="static/img/paso3khipu.png" alt="Paso 3 - Selección del banco" width="600">
   </li>
   <li>
     <strong>🟣 Paso 4: Ingreso de credenciales</strong><br>
-    El usuario ingresa con RUT y clave para simular el acceso bancario en entorno de pruebas.<br>
-    <img src="static/img/paso4khipu.png" alt="Ingreso de credenciales" width="600">
-    
+    Se simula el inicio de sesión en DemoBank con usuario y clave.<br>
+    <img src="static/img/paso4khipu.png" alt="Paso 4 - Ingreso de credenciales" width="600">
   </li>
   <li>
     <strong>🟣 Paso 5: Autorización del pago</strong><br>
-    Se simula una clave dinámica (token) para validar la operación.<br>
-    <img src="static/img/paso5khipu.png" alt="Autorización del pago" width="600">
-    
+    Validación mediante clave dinámica para autorizar la operación.<br>
+    <img src="static/img/paso5khipu.png" alt="Paso 5 - Autorización" width="600">
   </li>
   <li>
     <strong>🟣 Paso 6: Confirmación visual</strong><br>
-    Khipu confirma que la transferencia fue realizada exitosamente.<br>
-    <img src="static/img/paso6khipu.png" alt="Confirmación visual" width="600">
-    
+    Pantalla que indica que la transferencia fue exitosa.<br>
+    <img src="static/img/paso6khipu.png" alt="Paso 6 - Confirmación" width="600">
   </li>
   <li>
     <strong>🟣 Paso 7: Comprobante de pago</strong><br>
-    Se genera el comprobante de pago con todos los datos del cobro y se envía por correo electrónico.<br>
-    <img src="static/img/paso7khipu.png" alt="Comprobante de pago" width="600">
+    Comprobante enviado por email al finalizar la operación.<br>
+    <img src="static/img/paso7khipu.png" alt="Paso 7 - Comprobante" width="600">
   </li>
 </ul>
 
