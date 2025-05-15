@@ -1,14 +1,20 @@
 # 💸 Integración de pagos con la API de Khipu
 
-Este proyecto fue desarrollado como parte del proceso de selección de 
-Khipu.  
-Consiste en una aplicación construida con Flask que permite simular un 
-flujo completo de pago utilizando la **API v3 de Khipu**, en entorno de 
-pruebas (Demobank).
+Este proyecto fue desarrollado como parte del proceso de selección para el 
+equipo de Khipu.
 
-El monto configurado es de **$5.000 CLP**, y el objetivo es demostrar la 
-comprensión del producto, la autogestión y la integración vía API sin 
-intervención manual desde el portal.
+El objetivo principal fue simular un flujo real de cobro utilizando 
+exclusivamente la **API REST v3 de Khipu** en entorno de pruebas 
+(**Demobank**), sin intervención manual desde el portal.
+
+Toda la integración fue realizada mediante código utilizando **Python y 
+Flask**, generando el cobro a través de una llamada `POST` a 
+`/v3/payments` con los datos requeridos. El flujo incluye redirección al 
+entorno de pago, confirmación del resultado, y mensajes finales.
+
+✅ Se utilizaron recursos de documentación oficial y herramientas de apoyo 
+(como IA), pero toda la implementación fue desarrollada y probada de forma 
+autónoma.
 
 ---
 
@@ -29,8 +35,20 @@ intervención manual desde el portal.
 ```bash
 git clone https://github.com/camigaletto/Khipu-Integracion.git
 cd Khipu-Integracion
+
+2. Activa el entorno virtual:
+
 source env/bin/activate
+
+3. Instala las dependencias: 
+
 pip install flask requests
+
+4. Ejecuta la aplicacion: 
+
 python app.py
+
+5. Accedé desde tu navegador:
+
 http://localhost:5000
- 
+
