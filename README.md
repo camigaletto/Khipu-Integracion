@@ -46,23 +46,3 @@ python app.py
 
 # 5. Accedé desde tu navegador:
 http://localhost:5000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
