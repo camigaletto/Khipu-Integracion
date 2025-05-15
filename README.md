@@ -49,61 +49,46 @@ http://localhost:5000
 
 ---
 
+## 📸 Progreso visual del proceso de integración con Khipu
 
-## 📸 Capturas del proceso de integración con Khipu
+<ul>
+  <li>
+    <strong>🖥️ Paso 1: Inicio del flujo</strong><br>
+    El usuario accede a <code>/</code> y ve la interfaz principal con el botón “Pagar con Khipu”.<br>
+    <img src="static/img/paso1khipu.png" alt="Paso 1" width="600">
+  </li>
+  <li>
+    <strong>📄 Paso 2: Llamada a la API para crear el pago</strong><br>
+    Desde Flask, se ejecuta un <code>POST</code> a <code>/v3/payments</code> usando la API Key, y se genera el link de pago.<br>
+    <img src="static/img/paso2khipu.png" alt="Paso 2" width="600">
+  </li>
+  <li>
+    <strong>🏦 Paso 3: Redirección al entorno de pago (DemoBank)</strong><br>
+    El usuario es redirigido a la interfaz de Khipu para elegir su banco.<br>
+    <img src="static/img/paso3khipu.png" alt="Paso 3" width="600">
+  </li>
+  <li>
+    <strong>🔐 Paso 4: Inicio de sesión en el banco</strong><br>
+    Se ingresan las credenciales de prueba proporcionadas por Khipu.<br>
+    <img src="static/img/paso4khipu.png" alt="Paso 4" width="600">
+  </li>
+  <li>
+    <strong>🧾 Paso 5: Autorización del pago</strong><br>
+    Se utiliza un token de validación (clave dinámica) para confirmar la operación.<br>
+    <img src="static/img/paso5khipu.png" alt="Paso 5" width="600">
+  </li>
+  <li>
+    <strong>✅ Paso 6: Confirmación del pago</strong><br>
+    Khipu confirma el pago exitoso y redirige a la vista <code>/success</code>.<br>
+    <img src="static/img/paso6khipu.png" alt="Paso 6" width="600">
+  </li>
+  <li>
+    <strong>📧 Paso 7: Comprobante de pago por email</strong><br>
+    Se genera automáticamente el comprobante con los detalles de la transacción.<br>
+    <img src="static/img/paso7khipu.png" alt="Paso 7" width="600">
+  </li>
+</ul>
 
-### 🖥️ Paso 1: Inicio del flujo
-> El usuario accede a `/` y ve la interfaz principal con el botón “Pagar 
-con Khipu”.
-<img width="761" alt="paso1khipu" src="https://github.com/user-attachments/assets/a4bdf452-fa4a-4fe8-a5e7-3a7ff6f239d2" />
-
-
----
-
-### 🧾 Paso 2: Llamada a la API para crear el pago
-> Desde Flask, se ejecuta un `POST` a `/v3/payments` usando la API Key y 
-se genera un link de pago.
-![Paso 
-2](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso2khipu.png)
-
----
-
-### 🏦 Paso 3: Redirección al entorno de pago (DemoBank)
-> El usuario es redirigido automáticamente a la interfaz de Khipu para 
-elegir su banco.
-![Paso 
-3](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso3khipu.png)
-
----
-
-### 🔐 Paso 4: Inicio de sesión en el banco
-> Se ingresan credenciales simuladas proporcionadas por Khipu para el 
-entorno de pruebas.
-![Paso 
-4](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso4khipu.png)
-
----
-
-### 📲 Paso 5: Autorización del pago
-> Se utiliza un token de validación (clave dinámica) para confirmar la 
-operación.
-![Paso 
-5](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso5khipu.png)
-
----
-
-### ✅ Paso 6: Confirmación del pago exitoso
-> El sistema muestra una pantalla de éxito y redirige automáticamente a 
-`/success`.
-![Paso 
-6](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso6khipu.png)
-
----
-
-### 🧾 Paso 7: Comprobante por correo
-> Khipu envía automáticamente un correo con el comprobante de pago.
-![Paso 
-7](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso7khipu.png)
 
 
 
