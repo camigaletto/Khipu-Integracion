@@ -99,3 +99,18 @@ automáticamente a `/success`.
 [![Paso 6](static/img/paso6khipu.png)](static/img/paso6khipu.png)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
