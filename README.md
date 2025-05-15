@@ -50,42 +50,54 @@ http://localhost:5000
 ---
 
 
-## 📸 Capturas del proceso de integración
+## 📸 Capturas del proceso de integración con Khipu
 
-### 🖥️ Paso 1: Vista inicial de la aplicación Flask
-> El usuario accede a la ruta `/` y se renderiza `index.html` con el botón para iniciar el flujo de pago.  
+### 🖥️ Paso 1: Inicio del flujo
+> El usuario accede a `/` y ve la interfaz principal con el botón “Pagar 
+con Khipu”.
 [![Paso 1](static/img/paso1khipu.png)](static/img/paso1khipu.png)
 
 ---
 
-### 💳 Paso 2: Generación del link de pago desde Flask
-> Al hacer clic en el botón, se hace una solicitud `GET /pagar`, que ejecuta una llamada `POST` desde `app.py` a  
-> [`https://payment-api.khipu.com/v3/payments`](https://payment-api.khipu.com/v3/payments).  
+### 🧾 Paso 2: Llamada a la API para crear el pago
+> Desde Flask, se ejecuta un `POST` a `/v3/payments` usando la API Key y 
+se genera un link de pago.
 [![Paso 2](static/img/paso2khipu.png)](static/img/paso2khipu.png)
 
 ---
 
-### 🏦 Paso 3: Selección de cuenta Demobank  
-> Khipu redirige al usuario al entorno de pruebas, donde selecciona su banco (DemoBank) para continuar con el pago.  
+### 🏦 Paso 3: Redirección al entorno de pago (DemoBank)
+> El usuario es redirigido automáticamente a la interfaz de Khipu para 
+elegir su banco.
 [![Paso 3](static/img/paso3khipu.png)](static/img/paso3khipu.png)
 
 ---
 
-### 🔐 Paso 4: Ingreso a DemoBank  
-> El usuario ingresa su RUT y clave. Para efectos de test, Khipu provee credenciales simuladas.  
+### 🔐 Paso 4: Inicio de sesión en el banco
+> Se ingresan credenciales simuladas proporcionadas por Khipu para el 
+entorno de pruebas.
 [![Paso 4](static/img/paso4khipu.png)](static/img/paso4khipu.png)
 
 ---
 
-### 📲 Paso 5: Autorización del pago  
-> Se utiliza el token de validación (clave dinámica) provisto para confirmar la operación.  
+### 📲 Paso 5: Autorización del pago
+> Se utiliza un token de validación (clave dinámica) para confirmar la 
+operación.
 [![Paso 5](static/img/paso5khipu.png)](static/img/paso5khipu.png)
 
 ---
 
-### ✅ Paso 6: Confirmación de pago  
-> Una vez completado, Khipu muestra la pantalla de éxito y redirige automáticamente a `/success`.  
+### ✅ Paso 6: Confirmación del pago exitoso
+> El sistema muestra una pantalla de éxito y redirige automáticamente a 
+`/success`.
 [![Paso 6](static/img/paso6khipu.png)](static/img/paso6khipu.png)
+
+---
+
+### 📄 Paso 7: Comprobante de pago por correo
+> Al finalizar el flujo, Khipu envía automáticamente un comprobante al 
+correo del pagador con todos los datos de la transacción.
+[![Paso 7](static/img/paso7khipu.png)](static/img/paso7khipu.png)
 
 
 
