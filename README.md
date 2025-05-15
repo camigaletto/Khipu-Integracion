@@ -55,8 +55,8 @@ http://localhost:5000
 ### 🖥️ Paso 1: Inicio del flujo
 > El usuario accede a `/` y ve la interfaz principal con el botón “Pagar 
 con Khipu”.
-![Paso 
-1](https://github.com/camigaletto/Khipu-Integracion/raw/main/static/img/paso1khipu.png)
+<img width="761" alt="paso1khipu" src="https://github.com/user-attachments/assets/2acc3637-6973-41c6-8d0a-42fc75bf350b" />
+
 
 ---
 
