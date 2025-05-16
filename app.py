@@ -1,9 +1,13 @@
 from flask import Flask, redirect, render_template
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-API_KEY = "8ecaaec5-2516-48ad-b9ca-400776527fde"
+API_KEY = os.getenv("KHIPU_API_KEY")
 
 @app.route("/")
 def home():
@@ -12,7 +16,7 @@ def home():
 @app.route("/pagar")
 def pagar():
     url = "https://payment-api.khipu.com/v3/payments"
-    
+
     headers = {
         "x-api-key": API_KEY,
         "Content-Type": "application/json"
